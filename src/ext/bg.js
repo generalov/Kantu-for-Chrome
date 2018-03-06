@@ -211,7 +211,8 @@ const isTimeToBackup = () => {
 
 const bindEvents = () => {
   Ext.browserAction.onClicked.addListener(() => {
-    isUpgradeViewed()
+    // isUpgradeViewed()
+    Promise.resolve(true)
     .then(isViewed => {
       if (isViewed) {
         return activateTab(state.tabIds.panel, true)
@@ -1043,7 +1044,7 @@ const initPlayTab = () => {
 
 bindEvents()
 initIPC()
-initOnInstalled()
+// initOnInstalled()
 initPlayTab()
 
 window.clip = clipboard
