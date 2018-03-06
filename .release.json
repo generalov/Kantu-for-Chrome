@@ -1,0 +1,17 @@
+{
+  "verbose": true,
+  "non-interactive": true,
+  "pkgFiles": ["extension/manifest.json", "dist/manifest.json"],
+  "buildCommand": "crx pack ./dist -p key.pem -o kantu-extesion-${version}.crx",
+  "src": {
+    "tagName": "%s"
+  },
+  "github": {
+    "release": true,
+    "draft": true,
+    "assets": "kantu-extesion-*.crx"
+  },
+  "npm": {
+    "publish": false
+  }
+}
