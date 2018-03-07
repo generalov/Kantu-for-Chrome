@@ -1,42 +1,40 @@
 {
   "manifest_version": 2,
-
   "name": "Kantu Browser Automation",
   "description": "Web Browser Automation plus Selenium IDE Light",
   "short_name": "Kantu Macros",
-  "version": "2.3.0",
-
+  "version": "2.3.1",
   "icons": {
     "128": "logo.png"
   },
-
   "browser_action": {
     "default_icon": {
       "38": "logo.png"
     }
   },
-
   "background": {
-    "scripts": ["background.js"],
+    "scripts": [
+      "background.js"
+    ],
     "persistent": true
   },
-
   "web_accessible_resources": [
     "content_script.js"
   ],
-
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": [
+        "<all_urls>"
+      ],
       "all_frames": true,
       "match_about_blank": true,
-      "js": ["content_script.js"],
+      "js": [
+        "content_script.js"
+      ],
       "run_at": "document_start"
     }
   ],
-
   "offline_enabled": true,
-
   "permissions": [
     "storage",
     "tabs",
@@ -48,6 +46,6 @@
     "file:///*",
     "http://*/*",
     "https://*/*",
-    "\u003Call_urls>"
+    "<all_urls>"
   ]
 }
